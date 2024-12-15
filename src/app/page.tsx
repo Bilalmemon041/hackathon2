@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="mb-12 px-4 lg:px-10">
-  {/* Hero Section */}
+  
   <section className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-0 h-auto lg:h-[584px] m-[20px] lg:mt-[120px]">
     <div className="bg-[#2A254B] text-white h-auto lg:h-[580px] w-full lg:w-[800px] flex flex-col justify-between px-6 py-8">
       <div>
@@ -37,7 +37,7 @@ export default function Home() {
     </div>
   </section>
 
-  {/* Features Section */}
+  
   <section className="mt-[100px] text-gray-700">
     <h2 className="text-center font-normal text-2xl">What makes our brand different</h2>
     <div className="flex flex-wrap justify-center lg:justify-around mt-[60px] gap-8">
@@ -64,38 +64,73 @@ export default function Home() {
     </div>
   </section>
 
-  {/* Products Section */}
+  
   <section className="mt-12">
     <h2 className="ml-4 lg:ml-2 text-gray-600 text-2xl lg:text-3xl">New Ceramics</h2>
     <div className="flex flex-wrap justify-center lg:justify-around gap-8 mt-8">
-      {[
-        { img: "/chair.jpeg", title: "The Dendy Chair", price: "£250" },
-        { img: "/3cups.jpeg", title: "The Dendy Chair", price: "£250" },
-        { img: "/bottle.jpeg", title: "The Stanley Table", price: "£125" },
-        { img: "/light.jpeg", title: "New Lamp", price: "£250" },
-      ].map((product, index) => (
-        <div key={index} className="group max-w-[300px]">
-          <Link href="/Product">
-            <Image
-              src={product.img}
-              alt={product.title}
-              width={300}
-              height={380}
-              className="w-full h-[380px] mb-4 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-          </Link>
-          <div className="text-center text-gray-600">
-            {product.title} <br /> {product.price}
-          </div>
+      <div className="group max-w-[300px]">
+        <Link href="/Product">
+          <Image
+            src="/chair.jpeg"
+            alt="The Dendy Chair"
+            width={300}
+            height={380}
+            className="w-full h-[380px] mb-4 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+          />
+        </Link>
+        <div className="text-center text-gray-600">
+          The Dendy Chair <br /> £250
         </div>
-      ))}
+      </div>
+      <div className="group max-w-[300px]">
+        <Link href="/Product">
+          <Image
+            src="/3cups.jpeg"
+            alt="The Dendy Chair"
+            width={300}
+            height={380}
+            className="w-full h-[380px] mb-4 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+          />
+        </Link>
+        <div className="text-center text-gray-600">
+          The Dendy Chair <br /> £250
+        </div>
+      </div>
+      <div className="group max-w-[300px]">
+        <Link href="/Product">
+          <Image
+            src="/bottle.jpeg"
+            alt="The Stanley Table"
+            width={300}
+            height={380}
+            className="w-full h-[380px] mb-4 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+          />
+        </Link>
+        <div className="text-center text-gray-600">
+          The Stanley Table <br /> £125
+        </div>
+      </div>
+      <div className="group max-w-[300px]">
+        <Link href="/Product">
+          <Image
+            src="/light.jpeg"
+            alt="New Lamp"
+            width={300}
+            height={380}
+            className="w-full h-[380px] mb-4 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+          />
+        </Link>
+        <div className="text-center text-gray-600">
+          New Lamp <br /> £250
+        </div>
+      </div>
     </div>
     <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-9 mx-auto block">
       View collection
     </button>
   </section>
 
-  {/* Popular Products Section */}
+  
   <section className="mt-12">
     <h2 className="ml-4 lg:ml-2 text-gray-600 text-2xl lg:text-3xl">Our Popular Products</h2>
     <div className="flex flex-wrap justify-center lg:justify-around gap-8 mt-8">
@@ -107,7 +142,9 @@ export default function Home() {
           height={380}
           className="w-full h-[380px] mb-4 object-cover"
         />
-        <div className="text-center text-gray-600">The Dendy Chair <br /> £250</div>
+        <div className="text-center text-gray-600">
+          The Dendy Chair <br /> £250
+        </div>
       </div>
       <div className="group max-w-[300px]">
         <Image
@@ -117,7 +154,9 @@ export default function Home() {
           height={380}
           className="w-full h-[380px] mb-4 object-cover"
         />
-        <div className="text-center text-gray-600">The Dendy Chair <br /> £250</div>
+        <div className="text-center text-gray-600">
+          The Dendy Chair <br /> £250
+        </div>
       </div>
       <div className="group max-w-[300px]">
         <Image
@@ -127,7 +166,9 @@ export default function Home() {
           height={380}
           className="w-full h-[380px] mb-4 object-cover"
         />
-        <div className="text-center text-gray-600">The Dendy Chair <br /> £250</div>
+        <div className="text-center text-gray-600">
+          The Dendy Chair <br /> £250
+        </div>
       </div>
     </div>
     <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-9 mx-auto block">
@@ -158,41 +199,38 @@ export default function Home() {
       </div>
     </div>
   </section>
-    
-
-  <section className="mt-[100px] flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-0">
-  {/* Text Content */}
-  <div className="w-full lg:w-[720px] h-auto lg:h-[603px] flex flex-col text-gray-500 px-6 lg:ml-4">
-    <p className="text-xl lg:text-2xl text-gray-800 text-center lg:text-left">
-      From studio in London to global brand with <br /> over 400 outlets
-    </p>
-    <p className="mt-4 lg:mt-6 text-center lg:text-left">
-      When we started Avion, the idea was simple. Make high-quality furniture <br />
-      affordable and available for the mass market.
-    </p>
-    <p className="mt-4 lg:mt-7 text-center lg:text-left">
-      Handmade, and lovingly crafted furniture and homeware is what we live, <br />
-      breathe and design, so our Chelsea boutique became the hotbed for the <br />
-      London interior design community.
-    </p>
-    <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-6 lg:mt-[270px] mx-auto lg:mx-0">
-      Get in touch
-    </button>
-  </div>
-
-  {/* Image Section */}
-  <div className="w-full lg:w-[720px]">
-    <Image
-      width={720}
-      height={603}
-      alt="Footer Sofa"
-      src="/footersofa.jpeg"
-      className="w-full h-auto lg:h-[603px]"
-    />
-  </div>
-</section>
   
+  <section className="mt-[100px] flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-0">
+    <div className="w-full lg:w-[720px] h-auto lg:h-[603px] flex flex-col text-gray-500 px-6 lg:ml-4">
+      <p className="text-xl lg:text-2xl text-gray-800 text-center lg:text-left">
+        From studio in London to global brand with <br /> over 400 outlets
+      </p>
+      <p className="mt-4 lg:mt-6 text-center lg:text-left">
+        When we started Avion, the idea was simple. Make high-quality furniture <br />
+        affordable and available for the mass market.
+      </p>
+      <p className="mt-4 lg:mt-7 text-center lg:text-left">
+        Handmade, and lovingly crafted furniture and homeware is what we live, <br />
+        breathe and design, so our Chelsea boutique became the hotbed for the <br />
+        London interior design community.
+      </p>
+      <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-6 lg:mt-[270px] mx-auto lg:mx-0">
+        Get in touch
+      </button>
+    </div>
+
+    <div className="w-full lg:w-[720px]">
+      <Image
+        width={720}
+        height={603}
+        alt="Footer Sofa"
+        src="/footersofa.jpeg"
+        className="w-full h-auto lg:h-[603px]"
+      />
+    </div>
+  </section>
 </div>
+
 
   );
 }
