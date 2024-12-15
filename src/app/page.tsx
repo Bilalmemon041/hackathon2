@@ -1,101 +1,198 @@
+import { AppWindow, CircleCheck, HandCoins, Truck, TruckIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="mb-12 px-4 lg:px-10">
+  {/* Hero Section */}
+  <section className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-0 h-auto lg:h-[584px] m-[20px] lg:mt-[120px]">
+    <div className="bg-[#2A254B] text-white h-auto lg:h-[580px] w-full lg:w-[800px] flex flex-col justify-between px-6 py-8">
+      <div>
+        <p className="text-2xl lg:text-4xl text-slate-200 font-normal">
+          The furniture brand for the <br /> future, with timeless designs
+        </p>
+        <Link href="/Items">
+          <button className="w-[170px] h-[56px] text-slate-300 bg-[#F9F9F926] mt-9">
+            View collection
+          </button>
+        </Link>
+      </div>
+      <p className="text-sm lg:text-base text-slate-300 mt-10 lg:mt-[190px]">
+        A new era in eco-friendly furniture with Avelon, the French luxury retail brand <br />
+        with nice fonts, tasteful colors, and a beautiful way to display things digitally <br />
+        using modern web technologies.
+      </p>
     </div>
+    <div className="hidden lg:block">
+      <Link href="/Product">
+        <Image
+          width={498}
+          height={100}
+          alt="Chair"
+          src="/tablehome.jpeg"
+          className="w-full h-auto lg:w-[498px]"
+        />
+      </Link>
+    </div>
+  </section>
+
+  {/* Features Section */}
+  <section className="mt-[100px] text-gray-700">
+    <h2 className="text-center font-normal text-2xl">What makes our brand different</h2>
+    <div className="flex flex-wrap justify-center lg:justify-around mt-[60px] gap-8">
+      <div className="text-center max-w-[250px]">
+        <Truck />
+        <h3 className="my-3 text-lg lg:text-xl">Next day as standard</h3>
+        <p>Order before 3pm and get your order <br /> the next day as standard</p>
+      </div>
+      <div className="text-center max-w-[250px]">
+        <CircleCheck />
+        <h3 className="my-3 text-lg lg:text-xl">Made by true artisans</h3>
+        <p>Handmade crafted goods made with <br /> real passion and craftsmanship</p>
+      </div>
+      <div className="text-center max-w-[250px]">
+        <AppWindow />
+        <h3 className="my-3 text-lg lg:text-xl">Unbeatable prices</h3>
+        <p>For our materials and quality you <br /> won't find better prices anywhere</p>
+      </div>
+      <div className="text-center max-w-[250px]">
+        <HandCoins />
+        <h3 className="my-3 text-lg lg:text-xl">Recycled packaging</h3>
+        <p>We use 100% recycled packaging to <br /> ensure our footprint is manageable</p>
+      </div>
+    </div>
+  </section>
+
+  {/* Products Section */}
+  <section className="mt-12">
+    <h2 className="ml-4 lg:ml-2 text-gray-600 text-2xl lg:text-3xl">New Ceramics</h2>
+    <div className="flex flex-wrap justify-center lg:justify-around gap-8 mt-8">
+      {[
+        { img: "/chair.jpeg", title: "The Dendy Chair", price: "£250" },
+        { img: "/3cups.jpeg", title: "The Dendy Chair", price: "£250" },
+        { img: "/bottle.jpeg", title: "The Stanley Table", price: "£125" },
+        { img: "/light.jpeg", title: "New Lamp", price: "£250" },
+      ].map((product, index) => (
+        <div key={index} className="group max-w-[300px]">
+          <Link href="/Product">
+            <Image
+              src={product.img}
+              alt={product.title}
+              width={300}
+              height={380}
+              className="w-full h-[380px] mb-4 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            />
+          </Link>
+          <div className="text-center text-gray-600">
+            {product.title} <br /> {product.price}
+          </div>
+        </div>
+      ))}
+    </div>
+    <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-9 mx-auto block">
+      View collection
+    </button>
+  </section>
+
+  {/* Popular Products Section */}
+  <section className="mt-12">
+    <h2 className="ml-4 lg:ml-2 text-gray-600 text-2xl lg:text-3xl">Our Popular Products</h2>
+    <div className="flex flex-wrap justify-center lg:justify-around gap-8 mt-8">
+      <div className="group max-w-[630px]">
+        <Image
+          src="/sofa.jpeg"
+          alt="Sofa"
+          width={630}
+          height={380}
+          className="w-full h-[380px] mb-4 object-cover"
+        />
+        <div className="text-center text-gray-600">The Dendy Chair <br /> £250</div>
+      </div>
+      <div className="group max-w-[300px]">
+        <Image
+          src="/chair.jpeg"
+          alt="Chair"
+          width={300}
+          height={380}
+          className="w-full h-[380px] mb-4 object-cover"
+        />
+        <div className="text-center text-gray-600">The Dendy Chair <br /> £250</div>
+      </div>
+      <div className="group max-w-[300px]">
+        <Image
+          src="/3cups.jpeg"
+          alt="3 Cups"
+          width={300}
+          height={380}
+          className="w-full h-[380px] mb-4 object-cover"
+        />
+        <div className="text-center text-gray-600">The Dendy Chair <br /> £250</div>
+      </div>
+    </div>
+    <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-9 mx-auto block">
+      View collection
+    </button>
+  </section>
+
+  {/* Footer Section */}
+  <section className="bg-gray-200 h-11 mt-11"></section>
+  <section className="text-gray-600 mt-[60px]">
+    <h2 className="text-center text-2xl lg:text-4xl text-gray-800">
+      Join the club and get the benefit
+    </h2>
+    <p className="text-center text-sm lg:text-base mt-6 lg:mt-9">
+      Sign up for our newsletter and receive exclusive offers on <br />
+      new ranges, sales, pop-up stores, and more
+    </p>
+    <div className="flex flex-wrap justify-center gap-4 mt-6 lg:mt-[90px]">
+      <div className="bg-gray-200 w-full lg:w-[410px] h-[60px] px-4 flex items-center">
+        <input
+          type="email"
+          placeholder="your@email.com"
+          className="bg-gray-200 outline-none w-full text-gray-600"
+        />
+      </div>
+      <div className="bg-[#2A254B] w-[118px] h-[60px] text-white flex justify-center items-center cursor-pointer">
+        <Link href="">Sign up</Link>
+      </div>
+    </div>
+  </section>
+    
+
+  <section className="mt-[100px] flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-0">
+  {/* Text Content */}
+  <div className="w-full lg:w-[720px] h-auto lg:h-[603px] flex flex-col text-gray-500 px-6 lg:ml-4">
+    <p className="text-xl lg:text-2xl text-gray-800 text-center lg:text-left">
+      From studio in London to global brand with <br /> over 400 outlets
+    </p>
+    <p className="mt-4 lg:mt-6 text-center lg:text-left">
+      When we started Avion, the idea was simple. Make high-quality furniture <br />
+      affordable and available for the mass market.
+    </p>
+    <p className="mt-4 lg:mt-7 text-center lg:text-left">
+      Handmade, and lovingly crafted furniture and homeware is what we live, <br />
+      breathe and design, so our Chelsea boutique became the hotbed for the <br />
+      London interior design community.
+    </p>
+    <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-6 lg:mt-[270px] mx-auto lg:mx-0">
+      Get in touch
+    </button>
+  </div>
+
+  {/* Image Section */}
+  <div className="w-full lg:w-[720px]">
+    <Image
+      width={720}
+      height={603}
+      alt="Footer Sofa"
+      src="/footersofa.jpeg"
+      className="w-full h-auto lg:h-[603px]"
+    />
+  </div>
+</section>
+  
+</div>
+
   );
 }
