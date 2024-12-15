@@ -10,7 +10,7 @@ const page = () => {
   <section>
     <div className="flex flex-col md:flex-row justify-between items-center h-auto md:h-[277px]">
       <p className="ml-4 md:ml-[60px] text-xl md:text-4xl text-[#2A254B] font-sans text-center md:text-left">
-        A brand built on the love of craftsmanship, <br />
+        A brand built on the love of craftsmanship <br />
         quality and outstanding customer service
       </p>
       <Link href="/Items">
@@ -28,7 +28,7 @@ const page = () => {
         It started from small idea
       </h4>
       <p className="text-slate-300 mt-5">
-        A global brand with local beginnings, our story began in a <br />
+        A global brand with local beginnings our story began in a <br />
         small studio in South London in early 2014
       </p>
       <Link href="/Items">
@@ -109,7 +109,7 @@ const page = () => {
         <h3 className="my-3 text-lg lg:text-xl">Unbeatable prices</h3>
         <p className="text-sm lg:text-base">
           For our materials and quality you <br />
-          won't find better prices anywhere
+          wont find better prices anywhere
         </p>
       </div>
       <div className="text-center">

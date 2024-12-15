@@ -136,7 +136,7 @@ const page = () => {
           <div>
           <AppWindow/>
             <h3 className="my-3 text-xl">Unbeatable prices</h3>
-            <p>For our matrerials and quality you <br /> won't find better prices anywhere</p>
+            <p>For our matrerials and quality you <br /> wont find better prices anywhere</p>
           </div>
           <div>
           <HandCoins />

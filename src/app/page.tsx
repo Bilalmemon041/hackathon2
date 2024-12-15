@@ -54,7 +54,7 @@ export default function Home() {
       <div className="text-center max-w-[250px]">
         <AppWindow />
         <h3 className="my-3 text-lg lg:text-xl">Unbeatable prices</h3>
-        <p>For our materials and quality you <br /> won't find better prices anywhere</p>
+        <p>For our materials and quality you <br /> wont find better prices anywhere</p>
       </div>
       <div className="text-center max-w-[250px]">
         <HandCoins />
