@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Facebook, Instagram, Linkedin, LinkedinIcon, LucideLinkedin, Twitter } from 'lucide-react'
+import { Facebook, Instagram, LucideLinkedin, Twitter } from 'lucide-react'
 
 const Footer = () => {
   return (

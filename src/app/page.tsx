@@ -1,4 +1,4 @@
-import { AppWindow, CircleCheck, HandCoins, Truck, TruckIcon } from "lucide-react";
+import { AppWindow, CircleCheck, HandCoins, Truck,  } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
