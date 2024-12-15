@@ -7,7 +7,7 @@ export default function Home() {
     <div className="mb-12 px-4 lg:px-10">
   
   <section className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-0 h-auto lg:h-[584px] m-[20px] lg:mt-[120px]">
-    <div className="bg-[#2A254B] text-white h-auto lg:h-[580px] w-full lg:w-[800px] flex flex-col justify-between px-6 py-8">
+    <div className="bg-[#2A254B] text-white h-auto lg:h-[588px] w-full lg:w-[800px] flex flex-col justify-between px-6 py-8">
       <div>
         <p className="text-2xl lg:text-4xl text-slate-200 font-normal">
           The furniture brand for the <br /> future, with timeless designs
@@ -125,9 +125,9 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-9 mx-auto block">
+    <Link href="/Items"><button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-9 mx-auto block">
       View collection
-    </button>
+    </button></Link>
   </section>
 
   
@@ -171,9 +171,9 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-9 mx-auto block">
+    <Link href="/Items"><button className="w-[170px] h-[56px] bg-gray-300 hover:bg-gray-400 mt-9 mx-auto block">
       View collection
-    </button>
+    </button></Link>
   </section>
 
   {/* Footer Section */}

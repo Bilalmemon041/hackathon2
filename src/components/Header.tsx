@@ -23,8 +23,8 @@ export default function Header() {
         <div></div>
         <div className='font-normal text-[#22202E] ml-[40px] text-2xl'>Avion</div>
         <div className='flex mx-4 gap-3 text-gray-700 '>
+            <span><Link href="/">Home</Link></span>
             <span><Link href="/About">About</Link></span>
-            <span>Contact</span>
             <span>Blog</span>
             <span className='hidden md:block'><ShoppingCart /></span>
             <span className='hidden md:block'><CircleUser  /></span>
